@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Connn {
     Connection connection;
-    Statement statement;
+    public Statement statement;
     public Connn(){
         try{
             connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/upisystem","root","Sumukha123");

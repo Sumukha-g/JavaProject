@@ -1,10 +1,12 @@
 package upi.management.system;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
+
+import upi.management.system.View.MainView;
+import upi.management.system.View.Signup;
 
 public class Login extends JFrame implements ActionListener {
     JLabel label1, label2, label3;
@@ -106,7 +108,7 @@ public class Login extends JFrame implements ActionListener {
                 ResultSet resultSet = c.statement.executeQuery(q);
                 if (resultSet.next()){
                     setVisible(false);
-                    new main_Class(pin);
+                    new MainView(pin);
                 }else {
                     JOptionPane.showMessageDialog(null,"Incorrect Card Number or PIN");
                 }
