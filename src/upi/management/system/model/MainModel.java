@@ -1,13 +1,13 @@
 package upi.management.system.model;
 
 public class MainModel {
-    private String pin;
+    private String phono;
 
-    public MainModel(String pin) {
-        this.pin = pin;
+    public MainModel(String phono) {
+        this.phono = phono;
     }
 
-    public String getPin() {
-        return pin;
+    public String getPhoneNumber() {
+        return phono;
     }
 }

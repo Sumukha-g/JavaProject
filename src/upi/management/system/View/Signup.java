@@ -1,15 +1,11 @@
 package upi.management.system.View;
 
 import com.toedter.calendar.JDateChooser;
-import upi.management.system.Connn;
 import upi.management.system.controller.SignupController;
 import upi.management.system.model.SignupModel;
-import upi.management.system.main_Class;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.Random;
 
 public class Signup extends JFrame {

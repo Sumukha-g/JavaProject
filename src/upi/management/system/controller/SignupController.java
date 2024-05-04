@@ -2,6 +2,7 @@ package upi.management.system.controller;
 import  upi.management.system.View.MainView;
 import upi.management.system.model.SignupModel;
 import upi.management.system.View.Signup;
+import  upi.management.system.SessionData;
 import upi.management.system.Connn;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,6 +17,7 @@ public class SignupController implements ActionListener {
 
         // Attach event listener to the next button in the view
         view.getNextButton().addActionListener(this);
+        SessionData.getInstance().setPhoneNumber(model.getPhono());
     }
 
     @Override
@@ -46,7 +48,7 @@ public class SignupController implements ActionListener {
                 String upiid = username + "@ok_" + bankname;
                 String insertQuery = "INSERT INTO signupc VALUES ('" + username + "', '" + pin + "', '" + phono + "', '" + bankname + "', '" + fname + "', '" + dob + "', '" + address + "', '" + upiid + "')";
                 c.statement.executeUpdate(insertQuery);
-                new MainView(pin);
+                new MainView(model.getPhono());
                 view.setVisible(false);
             } catch (Exception ex) {
                 ex.printStackTrace();

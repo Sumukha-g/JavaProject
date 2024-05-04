@@ -38,7 +38,12 @@ public class LoginController implements ActionListener {
             if (loginModel.authenticateUser(cardNumber, pin)) {
                 // If authentication successful, hide login view and show main view
                 loginView.setVisible(false);
-                MainView mainView = new MainView(pin); // Assuming main view requires PIN
+                String phono=loginModel.getPhoneNumber(cardNumber);
+                MainView mainView = new MainView(phono);
+                MainModel mainModel=new MainModel(phono);
+                MainController mainController=new MainController(mainView,mainModel,phono);
+                loginView.setVisible(false);
+                mainView.setVisible(true);// Assuming main view requires PIN
                 // Create MainController if necessary
             } else {
                 // Show error message for incorrect credentials

@@ -32,13 +32,13 @@ public class LoginView extends JFrame {
         iimage.setBounds(630, 350, 100, 100);
         add(iimage);
 
-        JLabel label1 = new JLabel("WELCOME TO ATM");
+        JLabel label1 = new JLabel("UPI system");
         label1.setForeground(Color.WHITE);
         label1.setFont(new Font("AvantGarde", Font.BOLD, 38));
         label1.setBounds(230, 125, 450, 40);
         add(label1);
 
-        JLabel label2 = new JLabel("Card No:");
+        JLabel label2 = new JLabel("Username:");
         label2.setFont(new Font("Ralway", Font.BOLD, 28));
         label2.setForeground(Color.WHITE);
         label2.setBounds(150, 190, 375, 30);
@@ -62,22 +62,19 @@ public class LoginView extends JFrame {
 
         button1 = new JButton("SIGN IN");
         button1.setFont(new Font("Arial", Font.BOLD, 14));
-        button1.setForeground(Color.WHITE);
-        button1.setBackground(Color.BLACK);
+        button1.setForeground(Color.BLACK);
         button1.setBounds(300, 300, 100, 30);
         add(button1);
 
         button2 = new JButton("CLEAR");
         button2.setFont(new Font("Arial", Font.BOLD, 14));
-        button2.setForeground(Color.WHITE);
-        button2.setBackground(Color.BLACK);
+        button2.setForeground(Color.BLACK);
         button2.setBounds(430, 300, 100, 30);
         add(button2);
 
         button3 = new JButton("SIGN UP");
         button3.setFont(new Font("Arial", Font.BOLD, 14));
-        button3.setForeground(Color.WHITE);
-        button3.setBackground(Color.BLACK);
+        button3.setForeground(Color.BLACK);
         button3.setBounds(300, 350, 230, 30);
         add(button3);
 
